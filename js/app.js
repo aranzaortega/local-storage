@@ -56,10 +56,10 @@ function mostrarError(error){
     const contenido = document.querySelector('#contenido');
     contenido.appendChild(mensajeError);
 
-    //Eliminar la alerta después de 3 seg
+    //Eliminar la alerta después de 1 seg
     setTimeout (() => {
         mensajeError.remove();
-    }, 3000);
+    }, 1000);
 }
 
 function crearListaHTML(){
@@ -104,4 +104,5 @@ function sicronizarStorage(){
 function borrarTweet(id){
     // Para eliminar el tweet selecionado
     tweets = tweets.filter( tweet => tweet.id !== id);
+    crearListaHTML();
 }
